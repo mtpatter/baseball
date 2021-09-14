@@ -464,6 +464,18 @@ BATTER_SVG_HEADER = (
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
     '<rect x="0" y="0" width="266" height="200" stroke="black" fill="white" '
     'stroke-width="1"/>'
+
+    '<line x1="210" y1="0" x2="210" y2="266" stroke="black" fill="transparent"/>'
+
+)
+
+BATTER_SVG_HEADER_SUMMARY = (
+    '<svg x="{x_pos}" y="{y_pos}" width="266" height="200" version="1.1" '
+    'xmlns="http://www.w3.org/2000/svg" '
+    'xmlns:xlink="http://www.w3.org/1999/xlink">'
+    '<rect x="0" y="0" width="266" height="200" stroke="black" fill="white" '
+    'stroke-width="1"/>'
+
 )
 
 BATTER_NAME_TEMPLATE = (
@@ -471,10 +483,10 @@ BATTER_NAME_TEMPLATE = (
     '<text x="10" y="{name_y_pos}" font-family="Roboto" '
     'font-size="{batter_font_size}" '
     'text-anchor="start" fill="blue">{batter}</text></a>'
-    '<text x="40" y="{stats_y_pos}" font-family="Arial" '
-    'font-size="{stats_font_size}" '
-    'text-anchor="start">{stats}</text>'
-    '<text x="260" y="{name_y_pos}" font-family="Arial" '
+    # '<text x="40" y="{stats_y_pos}" font-family="Roboto" '
+    # 'font-size="{stats_font_size}" '
+    # 'text-anchor="start">{stats}</text>'  # REMOVE BATTER STATS
+    '<text x="260" y="{name_y_pos}" font-family="Roboto" '
     'font-size="{stats_font_size}" '
     'text-anchor="end">{appears}</text>'
 )
@@ -1600,7 +1612,7 @@ def get_team_batter_box_score_list(game, team, box_score_dict, offset):
     box_score_x_offset = BOX_WIDTH * (num_innings + 1)
 
     for batter_list in team.batting_order_list_list:
-        box_score_svg += BATTER_SVG_HEADER.format(
+        box_score_svg += BATTER_SVG_HEADER_SUMMARY.format(
             x_pos=box_score_x_offset,
             y_pos=offset + (BOX_HEIGHT // 2)
         )
@@ -1656,7 +1668,7 @@ def get_team_batter_list(team, offset):
             else:
                 batter_str = '{}'.format(batter_appearance.player_obj)
                 if batter_appearance.player_obj.bat_side:
-                    batter_str += ', {}'.format(
+                    batter_str += ' - {}'.format(
                         batter_appearance.player_obj.bat_side
                     )
 
@@ -1669,8 +1681,9 @@ def get_team_batter_list(team, offset):
                 else:
                     stats_str = ''
 
-            appears_str = '({}, {})'.format(batter_appearance.start_inning_num,
-                                            batter_appearance.position)
+            # FIXME  doesn't work
+            appears_str = '{: <3s} / {: >3s}'.format(str(batter_appearance.start_inning_num),
+                                                     str(batter_appearance.position))
 
             batter_svg += BATTER_NAME_TEMPLATE.format(
                 batter_id=batter_appearance.player_obj.mlb_id,
@@ -2038,8 +2051,8 @@ def get_pitcher_box_score_lines(pitcher_app_list, chunk_size, box_score_dict):
         box_score_tuple = box_score_dict[pitcher_app.player_obj]
         era_str, whip_str = get_box_score_whip_era(box_score_tuple)
         initial_era_stat_str = 'ERA: ' + str(pitcher_app.player_obj.era)
-        appears_str = '({}, {})'.format(pitcher_app.start_inning_num,
-                                        pitcher_app.position)
+        appears_str = '{:2s} / {:2s}'.format(str(pitcher_app.start_inning_num),
+                                             str(pitcher_app.position))
 
         pitcher_str = '{}'.format(pitcher_app.player_obj)
         if pitcher_app.player_obj.pitch_hand:
