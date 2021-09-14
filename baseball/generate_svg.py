@@ -2200,10 +2200,10 @@ def get_box_score_totals(game):
         box_score_totals_svg += TOTAL_BOX_SCORE_STATS_BOX.format(
             box_x=x_pos,
             box_y=y_pos,
-            stats_str_1=box_score_dict['TOTAL'].AB,
-            stats_str_2=box_score_dict['TOTAL'].R,
-            stats_str_3=box_score_dict['TOTAL'].H,
-            stats_str_4=box_score_dict['TOTAL'].RBI,
+            stats_str_1=box_score_dict['TOTAL'].R,  # Reorder
+            stats_str_2=box_score_dict['TOTAL'].H,
+            stats_str_3=box_score_dict['TOTAL'].RBI,
+            stats_str_4=box_score_dict['TOTAL'].AB,
             stats_str_5=box_score_dict['TOTAL'].BB,
             stats_str_6=box_score_dict['TOTAL'].SO,
             stats_str_7=box_score_dict['TOTAL'].LOB
@@ -2469,7 +2469,7 @@ def get_game_svg_str(game):
         get_logo(game),
         get_box_score_totals(game),
         get_big_rectangles(game),
-        get_footer_box(game),
+        #  get_footer_box(game),
         SVG_FOOTER
     )
 
