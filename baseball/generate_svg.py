@@ -64,11 +64,14 @@ EXTRA_COLUMNS = 3
 NUM_MINIMUM_INNINGS = 9
 LEN_BATTING_LIST = 9
 AUTOMATIC_BALL_COORDINATE = (300, 300)
-PITCH_X_MAX = 57
-PITCH_Y_MIN = 107
+
+# Changes for strike zone size
+PITCH_X_MAX = 85.5  # 57
+PITCH_Y_MIN = 26.75  # 107
 PITCH_MAX_COORD = 250.0
-PITCH_BOX_WIDTH = 50
-PITCH_BOX_HEIGHT = 90
+PITCH_BOX_WIDTH = 100  # 50
+PITCH_BOX_HEIGHT = 180  # 90
+
 PITCH_TYPE_X_OFFSET = 16
 PITCH_SPEED_X_OFFSET = 39
 FIRST_PITCH_X_VAL = 3
@@ -498,16 +501,20 @@ SVG_HEADER = (
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
     '<rect x="0" y="0" width="266" height="200" stroke="black" fill="white" '
     'stroke-width="1"/>'
-    '<line x1="67" y1="0" x2="67" y2="266" stroke="black" fill="transparent"/>'
+    # Remove line splitting box
+    # '<line x1="67" y1="0" x2="67" y2="266" stroke="black" fill="transparent"/>'
     '<!-- Diamond -->'
     '<path d="M71 101 A 45 45, 0, 0, 1, 261 101 L 166 196 Z" stroke="black" '
     'fill="transparent"/>'
     '<path d="M112 142 L 166 89 L 220 142" stroke="black" fill="transparent"/>'
+
+    # Remove pitch box and increase strike zone
     '<!-- Pitch box and Strike zone -->'
-    '<rect x="29" y="160" width="11" height="19" stroke="lightgray" '
+    # '<rect x="29" y="160" width="11" height="19" stroke="lightgray" '
+    '<rect x="29" y="130" width="22" height="38" stroke="lightgray" '
     'fill="transparent"/>'
-    '<path d="M13 266 L 13 143 L 55 143 L 55 266" stroke="black" '
-    'fill="transparent"/>'
+    # '<path d="M13 266 L 13 143 L 55 143 L 55 266" stroke="black" '
+    # 'fill="transparent"/>'
 )
 
 BIG_RECTANGLE = ('<path d="M0 {y_pos} L {width} {y_pos} '
