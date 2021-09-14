@@ -77,8 +77,8 @@ PITCH_SPEED_X_OFFSET = 39
 FIRST_PITCH_X_VAL = 3
 FIRST_PITCH_Y_VAL = 15
 PITCHER_LARGE_FONT_SIZE = 20
-PITCHER_MED_FONT_SIZE = 17
-PITCHER_SMALL_FONT_SIZE = 13
+PITCHER_MED_FONT_SIZE = 18  # 17
+PITCHER_SMALL_FONT_SIZE = 16  # 13
 PITCHER_STATS_LARGE_FONT_SIZE = 15
 PITCHER_STATS_MED_FONT_SIZE = 13
 PITCHER_STATS_SMALL_FONT_SIZE = 10
@@ -120,9 +120,9 @@ LEFT_FIELDER_X = 105
 CENTER_FIELDER_Y = 35
 RIGHT_FIELDER_X = 225
 BATTER_FONT_SIZE_BIG = 20
-BATTER_FONT_SIZE_MED_PLUS = 18
-BATTER_FONT_SIZE_MED = 15
-BATTER_FONT_SIZE_SMALL = 10
+BATTER_FONT_SIZE_MED_PLUS = 18  # 18
+BATTER_FONT_SIZE_MED = 18  # 15
+BATTER_FONT_SIZE_SMALL = 16  # 10
 BATTER_SPACE_BIG = 38
 BATTER_SPACE_MED_PLUS = 32
 BATTER_SPACE_MED = 22
@@ -136,14 +136,14 @@ BATTER_STATS_SPACES_MED_PLUS = 5
 BATTER_STATS_SPACES_MED = 6
 BATTER_STATS_SPACES_SMALL = 10
 BATTER_INITIAL_Y_POS = 25
-BIG_TITLE_SIZE = 55
-SMALL_TITLE_SIZE = 45
+BIG_TITLE_SIZE = 75
+SMALL_TITLE_SIZE = 65
 SUMMARY_SIZE_LARGE = 43
 SUMMARY_SIZE_SMALL = 30
-RED_COLOR = '#c10000'
-BLUE_COLOR = 'blue'
-DARK_GREEN_COLOR = 'darkgreen'
-BLACK_COLOR = 'black'
+RED_COLOR = '#e63946'  # '#c10000' # strikes
+BLUE_COLOR = '#4361ee'  # 'blue'  # hits
+DARK_GREEN_COLOR = 'darkgreen'  # '#006400' '#0a9396' # runs
+BLACK_COLOR = 'darkgrey'  # '#c1dbb3' '#70e000' '#76c893' # balls and other
 HALF_SCALE_HEADER = '<g transform="scale(0.5)">'
 HALF_SCALE_FOOTER = '</g>'
 SVG_FOOTER = '</svg>'
@@ -173,26 +173,42 @@ PITCH_TYPE_DESCRIPTION = {'Ball': 'B',
 
 BIG_SVG_HEADER = (
     '<?xml version="1.0" standalone="no"?>'
+
     '<svg height="2256" viewBox="0 0 {width} 4513" '
     'version="1.1" xmlns="http://www.w3.org/2000/svg" '
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
+
+    # Importing Google fonts
+    '<defs> '
+    '<style type="text/css"> @import url(\'https://fonts.googleapis.com/css2?family=Bebas+Neue\&amp;display=swap\');</style> '
+    '<style type="text/css"> @import url(\'https://fonts.googleapis.com/css2?family=Roboto:wght@700\&amp;display=swap\');</style> '
+    '<style type="text/css"> @import url(\'https://fonts.googleapis.com/css2?family=Staatliches\&amp;display=swap\');</style> '
+    '<style type="text/css"> @import url(\'https://fonts.googleapis.com/css2?family=Jockey+One\&amp;display=swap\');</style> '
+    '<style type="text/css"> @import url(\'https://fonts.googleapis.com/css2?family=Oswald\&amp;display=swap\');</style> '
+
+    '</defs>'
+
     '<rect x="0" y="0" width="{width}" height="4513" fill="#AAAAAA"/> '
-    '<rect x="0" y="0" width="266" height="100" fill="white" '
+    '<rect x="0" y="0" width="350" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="60" font-family="Arial" text-anchor="middle" '
-    'font-size="30">Batter</text>'
-    '<rect x="0" y="2256" width="266" height="100" fill="white" '
+    '<text x="133" y="75" font-family="Bebas Neue" text-anchor="middle" '
+    'font-size="60">Batter</text>'
+
+    '<rect x="0" y="2256" width="350" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="2316" font-family="Arial" text-anchor="middle" '
-    'font-size="30">Batter</text>'
+    '<text x="133" y="2326" font-family="Bebas Neue" text-anchor="middle" '
+    'font-size="60">Batter</text>'
+
     '<rect x="0" y="1900" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="1960" font-family="Arial" text-anchor="middle" '
-    'font-size="30">Inning Stats</text>'
+    '<text x="133" y="1960" font-family="Bebas Neue" text-anchor="middle" '
+    'font-size="40">Inning Stats</text>'
+
     '<rect x="0" y="4156" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="4216" font-family="Arial" text-anchor="middle" '
-    'font-size="30">Inning Stats</text>'
+    '<text x="133" y="4216" font-family="Bebas Neue" text-anchor="middle" '
+    'font-size="40">Inning Stats</text>'
+
     '<line x1="0" y1="2256" x2="{width}" y2="2256" stroke="black" '
     'stroke-width="1"/>'
 )
@@ -203,85 +219,90 @@ PITCHER_STATS_HEADER = (
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
     '<rect x="0" y="0" width="1596" height="256" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="150" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="150" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">PITCHER</text>'
-    '<text x="345" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="345" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">IP</text>'
-    '<text x="409" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="409" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">WLS</text>'
-    '<text x="482" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="482" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">BF</text>'
-    '<text x="545" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="545" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">H</text>'
-    '<text x="615" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="615" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">R</text>'
-    '<text x="685" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="685" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">ER</text>'
-    '<text x="755" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="755" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">SO</text>'
-    '<text x="825" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="825" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">BB</text>'
-    '<text x="897" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="897" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">IBB</text>'
-    '<text x="967" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="967" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">HBP</text>'
-    '<text x="1037" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="1037" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">BLK</text>'
-    '<text x="1105" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="1105" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">WP</text>'
-    '<text x="1175" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="1175" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">HR</text>'
-    '<text x="1250" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="1250" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">S</text>'
-    '<text x="1320" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="1320" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">P</text>'
-    '<text x="1398" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="1398" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">ERA</text>'
-    '<text x="1475" y="35" font-family="Arial" text-anchor="middle" '
+    '<text x="1475" y="35" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="20">WHIP</text>'
 )
 
 PITCHER_STATS_LINE_TEMPLATE = (
-    '<a target="_parent" xlink:href="http://m.mlb.com/player/{pitcher_id}">'
-    '<text x="10" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<a target="_parent" xlink:href="http://mlb.com/player/{pitcher_id}">'
+
+    # Adding lines for appearanec section
+    '<line x1="210" y1="0" x2="210" y2="266" stroke="black" stroke-width="1" fill="transparent"/>'
+    '<line x1="266" y1="0" x2="266" y2="266" stroke="black" stroke-width="1" fill="transparent"/>'
+
+    '<text x="10" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start" fill="blue">{pitcher}</text></a>'
-    '<text x="40" y="{stats_y_pos}" font-family="Arial" font-size="{size_2}" '
+    '<text x="40" y="{stats_y_pos}" font-family="Roboto" font-size="{size_2}" '
     'text-anchor="start">{stats}</text>'
-    '<text x="260" y="{name_y_pos}" font-family="Arial" font-size="{size_2}" '
+    '<text x="260" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="end">{appears}</text>'
-    '<text x="330" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="330" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_1}</text>'
-    '<text x="400" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="400" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_2}</text>'
-    '<text x="470" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="470" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_3}</text>'
-    '<text x="540" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="540" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_4}</text>'
-    '<text x="610" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="610" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_5}</text>'
-    '<text x="680" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="680" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_6}</text>'
-    '<text x="750" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="750" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_7}</text>'
-    '<text x="820" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="820" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_8}</text>'
-    '<text x="890" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="890" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_9}</text>'
-    '<text x="960" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="960" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_10}</text>'
-    '<text x="1030" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="1030" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_11}</text>'
-    '<text x="1100" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="1100" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_12}</text>'
-    '<text x="1170" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="1170" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_13}</text>'
-    '<text x="1240" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="1240" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_14}</text>'
-    '<text x="1310" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="1310" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_15}</text>'
-    '<text x="1380" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="1380" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_16}</text>'
-    '<text x="1450" y="{name_y_pos}" font-family="Arial" font-size="{size_1}" '
+    '<text x="1450" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start">{box_score_17}</text>'
 )
 
@@ -291,40 +312,40 @@ INNING_STATS_BOX = (
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
     '<rect x="0" y="0" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="40" y="28" font-family="Arial" '
+    '<text x="40" y="28" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_1}</text>'
-    '<text x="40" y="48" font-family="Arial" '
+    '<text x="40" y="48" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_2}</text>'
-    '<text x="40" y="68" font-family="Arial" '
+    '<text x="40" y="68" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_3}</text>'
-    '<text x="40" y="88" font-family="Arial" '
+    '<text x="40" y="88" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_4}</text>'
-    '<text x="140" y="28" font-family="Arial" '
+    '<text x="140" y="28" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_5}</text>'
-    '<text x="140" y="48" font-family="Arial" '
+    '<text x="140" y="48" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_6}</text>'
-    '<text x="140" y="68" font-family="Arial" '
+    '<text x="140" y="68" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_7}</text>'
-    '<text x="140" y="88" font-family="Arial" '
+    '<text x="140" y="88" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_8}</text>'
-    '<text x="192" y="28" font-family="Arial" '
+    '<text x="192" y="28" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_9}</text>'
-    '<text x="192" y="48" font-family="Arial" '
+    '<text x="192" y="48" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_10}</text>'
-    '<text x="192" y="68" font-family="Arial" '
+    '<text x="192" y="68" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_11}</text>'
-    '<text x="192" y="88" font-family="Arial" '
+    '<text x="192" y="88" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="20">{stats_str_12}</text>'
     '</svg>'
@@ -336,34 +357,34 @@ TOTAL_BOX_SCORE_STATS_BOX = (
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
     '<rect x="0" y="0" width="266" height="400" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="50" y="60" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">AB</text>'
-    '<text x="50" y="110" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">R</text>'
-    '<text x="50" y="160" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">H</text>'
-    '<text x="50" y="210" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">RBI</text>'
-    '<text x="50" y="260" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">BB</text>'
-    '<text x="50" y="310" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">SO</text>'
-    '<text x="50" y="360" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">LOB</text>'
-    '<text x="150" y="60" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">{stats_str_1}</text>'
-    '<text x="150" y="110" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">{stats_str_2}</text>'
-    '<text x="150" y="160" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">{stats_str_3}</text>'
-    '<text x="150" y="210" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">{stats_str_4}</text>'
-    '<text x="150" y="260" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">{stats_str_5}</text>'
-    '<text x="150" y="310" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">{stats_str_6}</text>'
-    '<text x="150" y="360" font-family="Arial" text-anchor="start" '
-    'font-size="30" font-weight="bold">{stats_str_7}</text>'
+    '<text x="50" y="70" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="60" font-weight="bold">R</text>'
+    '<text x="50" y="120" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">H</text>'
+    '<text x="50" y="170" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">RBI</text>'
+    '<text x="50" y="220" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">AB</text>'
+    '<text x="50" y="270" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">BB</text>'
+    '<text x="50" y="320" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">SO</text>'
+    '<text x="50" y="370" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">LOB</text>'
+    '<text x="150" y="70" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="60" font-weight="bold">{stats_str_1}</text>'
+    '<text x="150" y="120" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">{stats_str_2}</text>'
+    '<text x="150" y="170" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">{stats_str_3}</text>'
+    '<text x="150" y="220" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">{stats_str_4}</text>'
+    '<text x="150" y="270" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">{stats_str_5}</text>'
+    '<text x="150" y="320" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">{stats_str_6}</text>'
+    '<text x="150" y="370" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="35" font-weight="bold">{stats_str_7}</text>'
     '</svg>'
 )
 
@@ -371,16 +392,16 @@ BIG_SVG_COLUMN = (
     '<rect x="{x_pos}" y="0" width="266" height="100" fill="white" '
     'stroke="black" '
     'stroke-width="1"/>'
-    '<text x="{text_x_pos}" y="60" font-family="Arial" '
+    '<text x="{text_x_pos}" y="70" font-family="Bebas Neue" '
     'text-anchor="middle" '
-    'font-size="30">{inning_num}</text>'
+    'font-size="60">{inning_num}</text>'
     '<rect x="{x_pos}" y="2256" width="266" height="100" '
     'fill="white" '
     'stroke="black" '
     'stroke-width="1"/>'
-    '<text x="{text_x_pos}" y="2316" font-family="Arial" '
+    '<text x="{text_x_pos}" y="2326" font-family="Bebas Neue" '
     'text-anchor="middle" '
-    'font-size="30">{inning_num}</text>'
+    'font-size="60">{inning_num}</text>'
     '<line x1="0" y1="2256" x2="{width}" y2="2256" '
     'stroke="black" stroke-width="1"/>'
 )
@@ -393,47 +414,47 @@ BIG_SVG_TITLE = (
     'stroke="black" stroke-width="1"/>'
     '<rect x="0" y="0" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="67" font-family="Arial" text-anchor="middle" '
+    '<text x="133" y="67" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="50">{inning_half}</text>'
     '<text x="80" y="700" transform="rotate(-90,80,700)" '
-    'fill="black" font-size="{title_size}" font-family="Arial" text-anchor="middle" '
+    'fill="black" font-size="{title_size}" font-family="Bebas Neue" text-anchor="middle" '
     '>{game_str}</text>'
     '<text x="145" y="700" transform="rotate(-90,145,700)" '
-    'fill="black" font-size="45" font-family="Arial" text-anchor="middle" '
+    'fill="black" font-size="45" font-family="Bebas Neue" text-anchor="middle" '
     '>{location}</text>'
     '<text x="200" y="700" transform="rotate(-90,200,700)" '
-    'fill="black" font-size="30" font-family="Arial" text-anchor="middle" '
+    'fill="black" font-size="30" font-family="Bebas Neue" text-anchor="middle" '
     '>{datetime}</text>'
     '<text x="235" y="700" transform="rotate(-90,235,700)" '
-    'fill="black" font-size="30" font-family="Arial" text-anchor="middle" '
+    'fill="black" font-size="30" font-family="Bebas Neue" text-anchor="middle" '
     '>{detail_str}</text>'
-    '</svg>' 
+    '</svg>'
 )
 
 BOX_SCORE_COLUMN_HEADER = (
     '<rect x="{x_pos}" y="0" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="{text_x_pos}" y="60" font-family="Arial" '
-    'text-anchor="start" font-size="20">'
-    'AB'
-    '&#160;&#160;&#160;R'
-    '&#160;&#160;&#160;H'
-    '&#160;&#160;RBI'
-    '&#160;BB'
-    '&#160;SO'
-    '&#160;LOB'
+    '<text x="{text_x_pos}" y="60" font-family="Bebas Neue" '
+    'text-anchor="start" font-size="25">'
+    '&#160;&#160;AB'
+    '&#160;&#160;&#160;&#160;R'
+    '&#160;&#160;&#160;&#160;H'
+    '&#160;&#160;&#160;&#160;RBI'
+    '&#160;&#160;BB'
+    '&#160;&#160;&#160;SO'
+    '&#160;&#160;&#160;LOB'
     '</text>'
     '<rect x="{x_pos}" y="2256" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="{text_x_pos}" y="2316" font-family="Arial" text-anchor="start" '
-    'font-size="20">'
-    'AB'
-    '&#160;&#160;&#160;R'
-    '&#160;&#160;&#160;H'
-    '&#160;&#160;RBI'
-    '&#160;BB'
-    '&#160;SO'
-    '&#160;LOB'
+    '<text x="{text_x_pos}" y="2316" font-family="Bebas Neue" text-anchor="start" '
+    'font-size="25">'
+    '&#160;&#160;AB'
+    '&#160;&#160;&#160;&#160;R'
+    '&#160;&#160;&#160;&#160;H'
+    '&#160;&#160;&#160;&#160;RBI'
+    '&#160;&#160;BB'
+    '&#160;&#160;&#160;SO'
+    '&#160;&#160;&#160;LOB'
     '</text>'
 )
 
@@ -446,8 +467,8 @@ BATTER_SVG_HEADER = (
 )
 
 BATTER_NAME_TEMPLATE = (
-    '<a target="_parent" xlink:href="http://m.mlb.com/player/{batter_id}">'
-    '<text x="10" y="{name_y_pos}" font-family="Arial" '
+    '<a target="_parent" xlink:href="http://mlb.com/player/{batter_id}">'
+    '<text x="10" y="{name_y_pos}" font-family="Roboto" '
     'font-size="{batter_font_size}" '
     'text-anchor="start" fill="blue">{batter}</text></a>'
     '<text x="40" y="{stats_y_pos}" font-family="Arial" '
@@ -481,7 +502,7 @@ AWAY_LOGO = (
 )
 
 BOX_SCORE_LINE_TEMPLATE = (
-    '<text x="13" y="{name_y_pos}" font-family="Arial" '
+    '<text x="13" y="{name_y_pos}" font-family="Roboto" '
     'font-size="{batter_font_size}" text-anchor="start">{box_score_line}</text>'
 )
 
@@ -525,21 +546,23 @@ FOOTER_BOX = (
     '<rect x="0" y="0" width="{width}" height="4513" fill="none" '
     'stroke="black" stroke-width="4"/>'
     '<a target="_parent" xlink:href="http://www.livebaseballscorecards.com">'
-    '<text x="{text_pos}" y="3545" font-family="Arial" font-size="20" '
+    '<text x="{text_pos}" y="3545" font-family="Roboto" font-size="20" '
     'text-anchor="right" fill="blue">livebaseballscorecards.com</text></a>'
     '<a target="_parent" xlink:href="http://www.livebaseballscorecards.com">'
-    '<text x="{text_pos}" y="1290" font-family="Arial" font-size="20" '
+    '<text x="{text_pos}" y="1290" font-family="Roboto" font-size="20" '
     'text-anchor="right" fill="blue">livebaseballscorecards.com</text></a>'
 )
 
 SVG_PITCH_TEMPLATE = (
-    '<text x="{pitch_text_x_1}" y="{pitch_text_y}" font-family="Arial" '
+    '<text x="{pitch_text_x_1}" y="{pitch_text_y}" font-family="Roboto" '
     'fill="{pitch_color}" font-size="13">{pitch_code}'
     '<title id="title">{title}</title></text>'
-    '<text x="{pitch_text_x_2}" y="{pitch_text_y}" font-family="Arial" '
+
+    '<text x="{pitch_text_x_2}" y="{pitch_text_y}" font-family="Roboto" '
     'fill="{pitch_color}" font-size="13">{pitch_type} '
     '<title id="title">{title}</title></text>'
-    '<text x="{pitch_text_x_3}" y="{pitch_text_y}" font-family="Arial" '
+
+    '<text x="{pitch_text_x_3}" y="{pitch_text_y}" font-family="Roboto" '
     'fill="{pitch_color}" font-size="13">'
     '{pitch_speed}<title id="title">{title}</title></text>'
     '<rect x="{pitch_location_x}" y="{pitch_location_y}" width="2" '
@@ -547,16 +570,16 @@ SVG_PITCH_TEMPLATE = (
 )
 
 SVG_PICKOFF_TEMPLATE = (
-    '<text x="{pickoff_text_x_1}" y="{pickoff_text_y}" font-family="Arial" '
+    '<text x="{pickoff_text_x_1}" y="{pickoff_text_y}" font-family="Roboto" '
     'fill="{pickoff_color}" font-size="13">{pickoff_base}'
     '<title id="title">{title}</title></text>'
-    '<text x="{pickoff_text_x_2}" y="{pickoff_text_y}" font-family="Arial" '
+    '<text x="{pickoff_text_x_2}" y="{pickoff_text_y}" font-family="Roboto" '
     'fill="{pickoff_color}" font-size="13">{pickoff_result} '
     '<title id="title">{title}</title></text>'
 )
 
 SVG_SUMMARY_TEMPLATE = (
-    '<text x="260" y="192" font-family="Arial" font-size="34" '
+    '<text x="260" y="192" font-family="Bebas Neue" font-size="34" '
     'text-anchor="end">{summary}'
     '<title id="title">{title}</title>'
     '</text>'
@@ -570,9 +593,9 @@ SVG_BASE_1 = (
 SVG_BASE_2_TEMPLATE = (
     '<path d="M162 192 L 216 138 L 164 89" stroke="black" fill="transparent" '
     'stroke-width="11"/>'
-    '<text x="199" y="93" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="93" font-family="Roboto" text-anchor="start" '
     'font-size="22">{base_2_number}</text>'
-    '<text x="199" y="114" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="114" font-family="Roboto" text-anchor="start" '
     'font-size="{base_2_size}">{base_2_summary}'
     '<title id="title">{base_2_title}</title>'
     '</text>'
@@ -583,9 +606,9 @@ SVG_BASE_2_OUT_TEMPLATE = (
     'stroke-width="11"/>'
     '<path d="M184 124 L 201 107" stroke="black" fill="transparent" '
     'stroke-width="5"/>'
-    '<text x="199" y="93" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="93" font-family="Roboto" text-anchor="start" '
     'font-size="22">{base_2_number}</text>'
-    '<text x="199" y="114" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="114" font-family="Roboto" text-anchor="start" '
     'font-size="{base_2_size}">{base_2_summary}'
     '<title id="title">{base_2_title}</title>'
     '</text>'
@@ -594,15 +617,15 @@ SVG_BASE_2_OUT_TEMPLATE = (
 SVG_BASE_3_TEMPLATE = (
     '<path d="M162 192 L 216 138 L 164 89 L 111 142" stroke="black" '
     'fill="transparent" stroke-width="11"/>'
-    '<text x="199" y="93" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="93" font-family="Roboto" text-anchor="start" '
     'font-size="22">{base_2_number}</text>'
-    '<text x="199" y="114" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="114" font-family="Roboto" text-anchor="start" '
     'font-size="{base_2_size}">{base_2_summary}'
     '<title id="title">{base_2_title}</title>'
     '</text>'
-    '<text x="132" y="93" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="93" font-family="Roboto" text-anchor="end" '
     'font-size="22">{base_3_number}</text>'
-    '<text x="132" y="114" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="114" font-family="Roboto" text-anchor="end" '
     'font-size="{base_3_size}">{base_3_summary}'
     '<title id="title">{base_3_title}</title>'
     '</text>'
@@ -611,15 +634,15 @@ SVG_BASE_3_TEMPLATE = (
 SVG_BASE_3_EXTRA_INNINGS_TEMPLATE = (
     '<path d="M164 89 L 111 142" stroke="black" '
     'fill="transparent" stroke-width="11"/>'
-    '<text x="199" y="93" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="93" font-family="Roboto" text-anchor="start" '
     'font-size="22">{base_2_number}</text>'
-    '<text x="199" y="114" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="114" font-family="Roboto" text-anchor="start" '
     'font-size="{base_2_size}">{base_2_summary}'
     '<title id="title">{base_2_title}</title>'
     '</text>'
-    '<text x="132" y="93" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="93" font-family="Roboto" text-anchor="end" '
     'font-size="22">{base_3_number}</text>'
-    '<text x="132" y="114" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="114" font-family="Roboto" text-anchor="end" '
     'font-size="{base_3_size}">{base_3_summary}'
     '<title id="title">{base_3_title}</title>'
     '</text>'
@@ -630,15 +653,15 @@ SVG_BASE_3_OUT_TEMPLATE = (
     'fill="transparent" stroke-width="11"/>'
     '<path d="M130 109 L 145 124" stroke="black" fill="transparent" '
     'stroke-width="5"/>'
-    '<text x="199" y="93" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="93" font-family="Roboto" text-anchor="start" '
     'font-size="22">{base_2_number}</text>'
-    '<text x="199" y="114" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="114" font-family="Roboto" text-anchor="start" '
     'font-size="{base_2_size}">{base_2_summary}'
     '<title id="title">{base_2_title}</title>'
     '</text>'
-    '<text x="132" y="93" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="93" font-family="Roboto" text-anchor="end" '
     'font-size="22">{base_3_number}</text>'
-    '<text x="132" y="114" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="114" font-family="Roboto" text-anchor="end" '
     'font-size="{base_3_size}">{base_3_summary}'
     '<title id="title">{base_3_title}</title>'
     '</text>'
@@ -649,15 +672,15 @@ SVG_BASE_3_OUT_EXTRA_INNINGS_TEMPLATE = (
     'fill="transparent" stroke-width="11"/>'
     '<path d="M130 109 L 145 124" stroke="black" fill="transparent" '
     'stroke-width="5"/>'
-    '<text x="199" y="93" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="93" font-family="Roboto" text-anchor="start" '
     'font-size="22">{base_2_number}</text>'
-    '<text x="199" y="114" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="114" font-family="Roboto" text-anchor="start" '
     'font-size="{base_2_size}">{base_2_summary}'
     '<title id="title">{base_2_title}</title>'
     '</text>'
-    '<text x="132" y="93" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="93" font-family="Roboto" text-anchor="end" '
     'font-size="22">{base_3_number}</text>'
-    '<text x="132" y="114" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="114" font-family="Roboto" text-anchor="end" '
     'font-size="{base_3_size}">{base_3_summary}'
     '<title id="title">{base_3_title}</title>'
     '</text>'
@@ -670,21 +693,21 @@ SVG_BASE_4_TEMPLATE = (
     'fill="transparent" stroke-width="11"/>'
     '<rect x="79" y="138" width="75" height="75" stroke="black" fill="black" '
     'transform = "rotate(-45 100 100)"/>'
-    '<text x="199" y="93" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="93" font-family="Roboto" text-anchor="start" '
     'font-size="22">{base_2_number}</text>'
-    '<text x="199" y="114" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="114" font-family="Roboto" text-anchor="start" '
     'font-size="{base_2_size}">{base_2_summary}'
     '<title id="title">{base_2_title}</title>'
     '</text>'
-    '<text x="132" y="93" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="93" font-family="Roboto" text-anchor="end" '
     'font-size="22">{base_3_number}</text>'
-    '<text x="132" y="114" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="114" font-family="Roboto" text-anchor="end" '
     'font-size="{base_3_size}">{base_3_summary}'
     '<title id="title">{base_3_title}</title>'
     '</text>'
-    '<text x="164" y="133" font-family="Arial" text-anchor="middle" '
+    '<text x="164" y="133" font-family="Roboto" text-anchor="middle" '
     'font-size="22" fill="white">{base_4_number}</text>'
-    '<text x="164" y="158" font-family="Arial" text-anchor="middle" '
+    '<text x="164" y="158" font-family="Roboto" text-anchor="middle" '
     'font-size="{base_4_size}" fill="white">{base_4_summary}'
     '<title id="title">{base_4_title}</title>'
     '</text>'
@@ -695,60 +718,60 @@ SVG_BASE_4_OUT_TEMPLATE = (
     'fill="transparent" stroke-width="11"/>'
     '<path d="M128 174 L 143 158" stroke="black" fill="transparent" '
     'stroke-width="5"/>'
-    '<text x="199" y="93" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="93" font-family="Roboto" text-anchor="start" '
     'font-size="22">{base_2_number}</text>'
-    '<text x="199" y="114" font-family="Arial" text-anchor="start" '
+    '<text x="199" y="114" font-family="Roboto" text-anchor="start" '
     'font-size="{base_2_size}">{base_2_summary}'
     '<title id="title">{base_2_title}</title>'
     '</text>'
-    '<text x="132" y="93" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="93" font-family="Roboto" text-anchor="end" '
     'font-size="22">{base_3_number}</text>'
-    '<text x="132" y="114" font-family="Arial" text-anchor="end" '
+    '<text x="132" y="114" font-family="Roboto" text-anchor="end" '
     'font-size="{base_3_size}">{base_3_summary}'
     '<title id="title">{base_3_title}</title>'
     '</text>'
-    '<text x="164" y="133" font-family="Arial" text-anchor="middle" '
+    '<text x="164" y="133" font-family="Roboto" text-anchor="middle" '
     'font-size="22">{base_4_number}</text>'
-    '<text x="164" y="158" font-family="Arial" text-anchor="middle" '
+    '<text x="164" y="158" font-family="Roboto" text-anchor="middle" '
     'font-size="{base_4_size}">{base_4_summary}'
     '<title id="title">{base_4_title}</title>'
     '</text>'
 )
 
 SVG_OUT_TEMPLATE = (
-    '<circle cx="255" cy="{y_val}" r="8" stroke="#c10000" stroke-width="1" '
+    '<circle cx="254" cy="{y_val}" r="8" stroke="#c10000" stroke-width="2" '
     'fill="transparent" />'
-    '<text x="251" y="{y_text}" fill="#c10000" font-family="Arial" '
-    'font-size="15">{out_number}</text>'
+    '<text x="251" y="{y_text}" fill="#c10000" font-family="Bebas Neue" '
+    'font-size="16">{out_number}</text>'
 )
 
 SVG_FIELDING_TEMPLATE = (
-    '<text x="165" y="68" font-family="Arial" font-size="{size}" '
+    '<text x="165" y="68" font-family="Roboto" font-size="{size}" '
     'text-anchor="middle">{summary}'
     '<title id="title">{title}</title>'
     '</text>'
 )
 
 SVG_SWINGING_STRIKEOUT_TEMPLATE = (
-    '<text x="165" y="140" font-family="Arial" font-size="140" '
+    '<text x="165" y="140" font-family="Bebas Neue" font-size="140" '
     'text-anchor="middle">K'
     '<title id="title">{title}</title>'
     '</text>'
 )
 
 SVG_CALLED_STRIKEOUT_TEMPLATE = (
-    '<text x="155" y="140" font-family="Arial" font-size="140" '
+    '<text x="155" y="140" font-family="Bebas Neue" font-size="140" '
     'text-anchor="middle" transform="translate(320 0) scale(-1 1)">K'
     '<title id="title">{title}</title>'
     '</text>'
 )
 
 SVG_COUNT_TEMPLATE = (
-    '<text x="70" y="15" font-family="Arial" font-size="15">{count_str}'
+    '<text x="70" y="15" font-family="Roboto" font-size="15">{count_str}'
     '</text>'
 )
 
-SVG_RUNNER_TEMPLATE = ('<text x="70" y="{y_val}" font-family="Arial" '
+SVG_RUNNER_TEMPLATE = ('<text x="70" y="{y_val}" font-family="Bebas Neue" '
                        'stroke="{color}" fill="{color}" font-size="16" '
                        'text-anchor="start">{summary}'
                        '<title id="title">{title}</title></text>')
@@ -1500,8 +1523,9 @@ def get_svg_content_list(game):
                     pa_index, plate_appearance = plate_appearance_tuple
 
                     plate_appearance_svg = '{}{}{}{}{}{}'.format(
+                    # plate_appearance_svg = '{}{}{}{}{}'.format( # to remove pitches
                         get_summary_svg(plate_appearance),
-                        get_pitch_svg(plate_appearance),
+                        get_pitch_svg(plate_appearance),  # to remove pitches
                         get_runners_svg(plate_appearance),
                         get_count_svg(plate_appearance),
                         get_hit_svg(plate_appearance),
@@ -1526,6 +1550,7 @@ def get_svg_content_list(game):
                     prev_plate_appearance = plate_appearance
 
     return content_list
+
 
 def get_batter_spacing_values(batter_list):
     if len(batter_list) <= 5:
@@ -1609,6 +1634,7 @@ def get_team_batter_box_score_list(game, team, box_score_dict, offset):
 
     return box_score_svg
 
+
 def get_team_batter_list(team, offset):
     batter_svg = ''
     for batter_list in team.batting_order_list_list:
@@ -1654,7 +1680,7 @@ def get_team_batter_list(team, offset):
                 appears=appears_str,
                 batter=batter_str,
                 batter_font_size=batter_font_size,
-                stats_font_size=batter_font_size - 5
+                stats_font_size=batter_font_size - 3  # - 5 changed bc I removed stats
             )
 
             batter_y_pos += batter_space_increment
