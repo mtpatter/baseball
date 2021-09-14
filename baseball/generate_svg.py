@@ -577,8 +577,13 @@ SVG_PITCH_TEMPLATE = (
     '<text x="{pitch_text_x_3}" y="{pitch_text_y}" font-family="Roboto" '
     'fill="{pitch_color}" font-size="13">'
     '{pitch_speed}<title id="title">{title}</title></text>'
-    '<rect x="{pitch_location_x}" y="{pitch_location_y}" width="2" '
-    'height="2" stroke="{pitch_color}" fill="{pitch_color}"/>'
+
+    # Make pitches circles
+    # '<rect x="{pitch_location_x}" y="{pitch_location_y}" width="4" '
+    # 'height="4" stroke="{pitch_color}" fill="{pitch_color}"/>'
+    '<circle cx="{pitch_location_x}" cy="{pitch_location_y}" '
+    'r="4" stroke="{pitch_color}" fill="{pitch_color}"/>'
+
 )
 
 SVG_PICKOFF_TEMPLATE = (
