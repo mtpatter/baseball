@@ -1,3 +1,25 @@
+## Template Scorecards
+
+To build a custom blank scorecard for printing, run e.g.:
+
+```python
+python template_scorecard.py 2021-11-02 CHC CLE
+```
+
+Or in Docker:
+
+```
+docker build -t 'scorecard' .
+
+docker run -it --rm \
+  scorecard \
+  python template_scorecard.py 2021-11-02 CHC CLE
+```
+
+This will produce an .svg file for printing.
+
+To print the top and bottom of the innings with an optimal page break, select landscape, with custom 0.75" margins top and bottom, at 57% scale.
+
 **Table of Contents**
 
 - [Baseball](#baseball)
@@ -240,7 +262,7 @@ for inning in game.inning_list:
         for event in appearance.event_list:
             if isinstance(event, baseball.Pitch):
                 pitch_tuple_list.append(
-                    (str(appearance.pitcher), 
+                    (str(appearance.pitcher),
                      event.pitch_description,
                      event.pitch_position,
                      event.pitch_speed,
@@ -447,7 +469,7 @@ for game_id, game in game_list_2017:
                     for event in appearance.event_list:
                         if isinstance(event, baseball.Pitch):
                             pitch_tuple_list_2.append(
-                                (str(appearance.pitcher), 
+                                (str(appearance.pitcher),
                                  event.pitch_description,
                                  event.pitch_position,
                                  event.pitch_speed,
