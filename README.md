@@ -3,7 +3,7 @@
 To build a custom blank scorecard for printing, run e.g.:
 
 ```python
-python template_scorecard.py 2021-11-02 CHC CLE
+python template_scorecard.py 2016-11-02 CHC CLE
 ```
 
 Or in Docker:
@@ -14,7 +14,7 @@ docker build -t 'scorecard' .
 docker run -it --rm \
   -v $PWD:/app/baseball \
   scorecard \
-  python template_scorecard.py 2021-11-02 CHC CLE
+  python template_scorecard.py 2016-11-02 CHC CLE
 ```
 
 This mounts a directory to write an .svg file locally for printing.
