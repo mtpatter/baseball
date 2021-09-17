@@ -12,11 +12,12 @@ Or in Docker:
 docker build -t 'scorecard' .
 
 docker run -it --rm \
+  -v $PWD:/app/baseball \
   scorecard \
   python template_scorecard.py 2021-11-02 CHC CLE
 ```
 
-This will produce an .svg file for printing.
+This mounts a directory to write an .svg file locally for printing.
 
 To print the top and bottom of the innings with an optimal page break, select landscape, with custom 0.75" margins top and bottom, at 57% scale.
 
