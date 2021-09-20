@@ -783,12 +783,12 @@ def get_inning_stats_box(box_x, box_y):
         INNING_STATS_BOX.format(
             box_x=box_x,
             box_y=box_y,
-            stats_str_1='R:',
-            stats_str_2='H:',
-            stats_str_3='LOB:',
-            stats_str_4='K:',
-            stats_str_5='BB:',
-            stats_str_6='E:'
+            stats_str_1='R',
+            stats_str_2='H',
+            stats_str_3='E',
+            stats_str_4='K',
+            stats_str_5='BB',
+            stats_str_6='LOB'
         )
     )
 
