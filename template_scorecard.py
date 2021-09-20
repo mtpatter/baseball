@@ -75,9 +75,9 @@ PITCHER_SMALL_FONT_SIZE = 22
 PITCHER_STATS_LARGE_FONT_SIZE = 25
 PITCHER_STATS_MED_FONT_SIZE = 23
 PITCHER_STATS_SMALL_FONT_SIZE = 20
-PITCHER_BOX_SCORE_LARGE_Y = 75
-PITCHER_BOX_SCORE_MED_Y = 70
-PITCHER_BOX_SCORE_SMALL_Y = 63
+PITCHER_BOX_SCORE_LARGE_Y = 90
+PITCHER_BOX_SCORE_MED_Y = 85
+PITCHER_BOX_SCORE_SMALL_Y = 78
 PITCHER_BOX_SCORE_X_INCREMENT = 70
 PITCHER_BOX_SCORE_LARGE_Y_INCREMENT = 40
 PITCHER_BOX_SCORE_MED_Y_INCREMENT = 34
@@ -164,24 +164,24 @@ BIG_SVG_HEADER = (
     '<rect x="0" y="0" width="{width}" height="4913" fill="#AAAAAA"/> ' # extra batter
     '<rect x="0" y="0" width="532" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="75" font-family="Bebas Neue" text-anchor="middle" '
+    '<text x="250" y="75" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="60">Batter</text>'
 
     #'<rect x="0" y="2256" width="532" height="100" fill="white" '
     '<rect x="0" y="2456" width="532" height="100" fill="white" ' # extra batter
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="2526" font-family="Bebas Neue" text-anchor="middle" ' # was 2326
+    '<text x="250" y="2526" font-family="Bebas Neue" text-anchor="middle" ' # was 2326
     'font-size="60">Batter</text>'
 
     '<rect x="0" y="2100" width="532" height="100" fill="white" ' # extra batter
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="2160" font-family="Bebas Neue" text-anchor="middle" '
+    '<text x="250" y="2160" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="40">Inning Stats</text>'
 
     #'<rect x="0" y="4156" width="532" height="100" fill="white" '
     '<rect x="0" y="4556" width="532" height="100" fill="white" ' # extra batter
     'stroke="black" stroke-width="1"/>'
-    '<text x="133" y="4616" font-family="Bebas Neue" text-anchor="middle" '
+    '<text x="250" y="4616" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="40">Inning Stats</text>'
 
     '<line x1="0" y1="2456" x2="{width}" y2="2456" stroke="black" '
@@ -238,11 +238,12 @@ PITCHER_STATS_LINE_TEMPLATE = (
 
     '<text x="10" y="{name_y_pos}" font-family="Roboto" font-size="{size_1}" '
     'text-anchor="start" fill="blue">{pitcher}</text></a>'
-    '<text x="320" y="{name_y_pos}" font-family="Roboto" font-size="{size_2}" '
+    '<text x="350" y="{name_y_pos}" font-family="Roboto" font-size="{size_2}" '
     'text-anchor="start">{stats}</text>'
-    '<text x="500" y="{name_y_pos}" font-family="Roboto" font-size="{size_2}" '
+    '<text x="520" y="{name_y_pos}" font-family="Roboto" font-size="{size_2}" '
     'text-anchor="end">{appears}</text>'
     '<b>page-break-after : always</b> '
+
 )
 
 INNING_STATS_BOX = (
@@ -266,7 +267,7 @@ INNING_STATS_BOX = (
     '<text x="90" y="80" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="22">{stats_str_5}</text>'
-    '<text x="170" y="80" font-family="Roboto" '
+    '<text x="160" y="80" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="22">{stats_str_6}</text>'
     '</svg>'
@@ -280,22 +281,22 @@ PROOF_BOX = (
     'stroke="black" stroke-width="1"/>'
     '<text x="20" y="30" font-family="Roboto" '
     'text-anchor="start" '
-    'font-size="22">{stats_str_1}</text>'
+    'font-size="24">{stats_str_1}</text>'
     '<text x="20" y="80" font-family="Roboto" '
     'text-anchor="start" '
-    'font-size="22">{stats_str_2}</text>'
+    'font-size="24">{stats_str_2}</text>'
     '<text x="20" y="130" font-family="Roboto" '
     'text-anchor="start" '
-    'font-size="22">{stats_str_3}</text>'
+    'font-size="24">{stats_str_3}</text>'
     '<text x="20" y="180" font-family="Roboto" '
     'text-anchor="start" '
-    'font-size="22">{stats_str_4}</text>'
+    'font-size="24">{stats_str_4}</text>'
 
     '<line x1="0" y1="200" x2="266" y2="200" stroke="black" stroke-width="1" fill="transparent"/>'
 
     '<text x="20" y="230" font-family="Roboto" '
     'text-anchor="start" '
-    'font-size="22">{stats_str_5}</text>'
+    'font-size="24">{stats_str_5}</text>'
     '</svg>'
 )
 
@@ -364,27 +365,27 @@ BIG_SVG_TITLE = (
 BOX_SCORE_COLUMN_HEADER = (
     '<rect x="{x_pos}" y="0" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="{text_x_pos}" y="60" font-family="Bebas Neue" '
-    'text-anchor="start" font-size="25">'
-    '&#160;&#160;AB'
-    '&#160;&#160;&#160;&#160;R'
-    '&#160;&#160;&#160;&#160;H'
-    '&#160;&#160;&#160;&#160;RBI'
-    '&#160;&#160;BB'
-    '&#160;&#160;&#160;SO'
-    '&#160;&#160;&#160;LOB'
+    '<text x="{text_x_pos}" y="60" font-family="Roboto" '
+    'text-anchor="start" font-size="24">'
+    'AB'
+    '&#160;R'
+    '&#160;H'
+    '&#160;RBI'
+    '&#160;BB'
+    '&#160;SO'
+    '&#160;LOB'
     '</text>'
     '<rect x="{x_pos}" y="2456" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="{text_x_pos}" y="2516" font-family="Bebas Neue" text-anchor="start" '
-    'font-size="25">'
-    '&#160;&#160;AB'
-    '&#160;&#160;&#160;&#160;R'
-    '&#160;&#160;&#160;&#160;H'
-    '&#160;&#160;&#160;&#160;RBI'
-    '&#160;&#160;BB'
-    '&#160;&#160;&#160;SO'
-    '&#160;&#160;&#160;LOB'
+    '<text x="{text_x_pos}" y="2516" font-family="Roboto" text-anchor="start" '
+    'font-size="24">'
+    'AB'
+    '&#160;R'
+    '&#160;H'
+    '&#160;RBI'
+    '&#160;BB'
+    '&#160;SO'
+    '&#160;LOB'
     '</text>'
 )
 
