@@ -458,9 +458,9 @@ SVG_HEADER = (
     # Remove line splitting box
     # '<line x1="67" y1="0" x2="67" y2="266" stroke="black" fill="transparent"/>'
     '<!-- Diamond -->'
-    '<path d="M71 101 A 45 45, 0, 0, 1, 261 101 L 166 196 Z" stroke="darkgrey" '
+    '<path d="M61 91 A 45 40, 0, 0, 1, 251 91 L 156 186 Z" stroke="darkgrey" '
     'stroke-dasharray="5,5" stroke-width="2" fill="transparent"/>'
-    '<path d="M112 142 L 166 89 L 220 142" stroke="darkgrey" stroke-width="2" stroke-dasharray="5,5" fill="transparent"/>'
+    '<path d="M102 132 L 156 79 L 210 132" stroke="darkgrey" stroke-width="2" stroke-dasharray="5,5" fill="transparent"/>'
 
     # Balls and strikes
     '<circle cx="20" cy="17" '
