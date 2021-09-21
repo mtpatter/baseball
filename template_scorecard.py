@@ -488,8 +488,8 @@ SVG_HEADER = (
     # 'stroke-width="2"/>'
 
     # outs
-    '<circle cx="245" cy="21" '
-    'r="20" stroke="darkgrey" stroke-width="2" stroke-dasharray="5,5" fill="white"/>'
+    #'<circle cx="245" cy="21" '
+    #'r="20" stroke="darkgrey" stroke-width="2" stroke-dasharray="5,5" fill="white"/>'
 
 )
 
