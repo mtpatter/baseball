@@ -75,9 +75,9 @@ PITCHER_SMALL_FONT_SIZE = 22
 PITCHER_STATS_LARGE_FONT_SIZE = 25
 PITCHER_STATS_MED_FONT_SIZE = 23
 PITCHER_STATS_SMALL_FONT_SIZE = 20
-PITCHER_BOX_SCORE_LARGE_Y = 90
-PITCHER_BOX_SCORE_MED_Y = 85
-PITCHER_BOX_SCORE_SMALL_Y = 78
+PITCHER_BOX_SCORE_LARGE_Y = 110
+PITCHER_BOX_SCORE_MED_Y = 105
+PITCHER_BOX_SCORE_SMALL_Y = 98
 PITCHER_BOX_SCORE_X_INCREMENT = 70
 PITCHER_BOX_SCORE_LARGE_Y_INCREMENT = 40
 PITCHER_BOX_SCORE_MED_Y_INCREMENT = 34
@@ -173,7 +173,7 @@ BIG_SVG_HEADER = (
     '<text x="250" y="2526" font-family="Bebas Neue" text-anchor="middle" ' # was 2326
     'font-size="60">Batter</text>'
 
-    '<rect x="0" y="2100" width="532" height="100" fill="white" ' # extra batter
+    '<rect x="0" y="2100" width="532" height="200" fill="white" ' # extra batter
     'stroke="black" stroke-width="1"/>'
     '<text x="250" y="2160" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="40">Inning Stats</text>'
@@ -189,52 +189,48 @@ BIG_SVG_HEADER = (
 )
 
 PITCHER_STATS_HEADER = (
-    '<svg x="{x_box}" y="{y_box}" width="1596" height="256" '
+    '<svg x="{x_box}" y="{y_box}" width="1596" height="360" '
     'version="1.1" xmlns="http://www.w3.org/2000/svg" '
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
-    '<rect x="0" y="0" width="1596" height="256" fill="white" '
+    '<rect x="0" y="0" width="1596" height="360" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="250" y="42" font-family="Bebas Neue" text-anchor="middle" '
+    '<text x="250" y="47" font-family="Bebas Neue" text-anchor="middle" '
     'font-size="40">PITCHER</text>'
 
-    '<line x1="532" y1="0" x2="532" y2="256" stroke="darkgrey" fill="transparent"/>'
+    '<line x1="532" y1="0" x2="532" y2="360" stroke="darkgrey" fill="transparent"/>'
 
-    '<text x="580" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="570" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">IP</text>'
-    '<text x="640" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="645" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">BF</text>'
-    #'<text x="682" y="35" font-family="Roboto" text-anchor="left" '
+    #'<text x="682" y="40" font-family="Roboto" text-anchor="left" '
     #'font-size="30">BF</text>'
-    '<text x="745" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="740" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">H</text>'
-    '<text x="815" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="820" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">BB</text>'
-    '<text x="885" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="910" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">SO</text>'
-    #'<text x="955" y="35" font-family="Roboto" text-anchor="left" '
-    #'font-size="30">HR</text>'
-    '<text x="1025" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="1010" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">R</text>'
-    '<text x="1085" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="1085" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">ER</text>'
-    '<text x="1165" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="1175" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">HR</text>'
-    #'<text x="1237" y="35" font-family="Roboto" text-anchor="left" '
-    #'font-size="30">SO</text>'
-    '<text x="1305" y="35" font-family="Roboto" text-anchor="left" '
-    'font-size="30">HBP WP BLK</text>'
-    #'<text x="1375" y="35" font-family="Roboto" text-anchor="left" '
-    #'font-size="30">BLK</text>'
-    #'<text x="1450" y="35" font-family="Roboto" text-anchor="left" '
-    #'font-size="30">WP</text>'
-    '<text x="1520" y="35" font-family="Roboto" text-anchor="left" '
+    '<text x="1255" y="40" font-family="Roboto" text-anchor="left" '
+    'font-size="30">HBP</text>'
+    '<text x="1350" y="40" font-family="Roboto" text-anchor="left" '
+    'font-size="30">WP</text>'
+    '<text x="1430" y="40" font-family="Roboto" text-anchor="left" '
+    'font-size="30">BLK</text>'
+    '<text x="1520" y="40" font-family="Roboto" text-anchor="left" '
     'font-size="30">WLS</text>'
-    #'<text x="1398" y="35" font-family="Bebas Neue" text-anchor="left" '
+    #'<text x="1398" y="40" font-family="Bebas Neue" text-anchor="left" '
     #'font-size="30">ERA</text>'
-    #'<text x="1475" y="35" font-family="Bebas Neue" text-anchor="left" '
+    #'<text x="1475" y="40" font-family="Bebas Neue" text-anchor="left" '
     #'font-size="30">WHIP</text>'
 
-    '<line x1="0" y1="50" x2="1596" y2="50" stroke="black" fill="transparent"/>'
+    '<line x1="0" y1="60" x2="1596" y2="60" stroke="black" fill="transparent"/>'
 
 )
 
@@ -252,56 +248,68 @@ PITCHER_STATS_LINE_TEMPLATE = (
 )
 
 INNING_STATS_BOX = (
-    '<svg x="{box_x}" y="{box_y}" width="1596" height="256" '
+    '<svg x="{box_x}" y="{box_y}" width="1596" height="560" '
     'version="1.1" xmlns="http://www.w3.org/2000/svg" '
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
-    '<rect x="0" y="0" width="266" height="256" fill="white" '
+    '<rect x="0" y="0" width="266" height="560" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="20" y="30" font-family="Roboto" '
+    '<text x="35" y="30" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="22">{stats_str_1}</text>'
-    '<text x="90" y="30" font-family="Roboto" '
+    '<text x="125" y="30" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="22">{stats_str_2}</text>'
-    '<text x="160" y="30" font-family="Roboto" '
+    '<text x="210" y="30" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="22">{stats_str_3}</text>'
-    '<text x="20" y="80" font-family="Roboto" '
+
+    '<line x1="0" y1="40" x2="266" y2="40" stroke="black" stroke-width="1" fill="transparent"/>'
+    '<line x1="0" y1="100" x2="266" y2="100" stroke="black" stroke-width="1" fill="transparent"/>'
+    '<line x1="0" y1="140" x2="266" y2="140" stroke="black" stroke-width="1" fill="transparent"/>'
+
+    '<text x="35" y="130" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="22">{stats_str_4}</text>'
-    '<text x="90" y="80" font-family="Roboto" '
+    '<text x="120" y="130" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="22">{stats_str_5}</text>'
-    '<text x="160" y="80" font-family="Roboto" '
+    '<text x="200" y="130" font-family="Roboto" '
     'text-anchor="start" '
     'font-size="22">{stats_str_6}</text>'
+    '<line x1="0" y1="200" x2="266" y2="200" stroke="black" stroke-width="1" fill="transparent"/>'
+
+
+    '<line x1="89" y1="0" x2="89" y2="200" stroke="darkgrey" stroke-width="1" fill="transparent"/>'
+    '<line x1="178" y1="0" x2="178" y2="200" stroke="darkgrey" stroke-width="1" fill="transparent"/>'
+
     '</svg>'
 )
 
 PROOF_BOX = (
-    '<svg x="{box_x}" y="{box_y}" width="1596" height="256" '
+    '<svg x="{box_x}" y="{box_y}" width="1596" height="360" '
     'version="1.1" xmlns="http://www.w3.org/2000/svg" '
     'xmlns:xlink="http://www.w3.org/1999/xlink">'
-    '<rect x="0" y="0" width="266" height="256" fill="white" '
+    '<rect x="0" y="0" width="266" height="360" fill="white" '
     'stroke="black" stroke-width="1"/>'
-    '<text x="20" y="30" font-family="Roboto" '
-    'text-anchor="start" '
-    'font-size="24">{stats_str_1}</text>'
-    '<text x="20" y="80" font-family="Roboto" '
-    'text-anchor="start" '
-    'font-size="24">{stats_str_2}</text>'
-    '<text x="20" y="130" font-family="Roboto" '
-    'text-anchor="start" '
-    'font-size="24">{stats_str_3}</text>'
-    '<text x="20" y="180" font-family="Roboto" '
-    'text-anchor="start" '
-    'font-size="24">{stats_str_4}</text>'
 
-    '<line x1="0" y1="200" x2="266" y2="200" stroke="black" stroke-width="1" fill="transparent"/>'
-
+    '<text x="20" y="50" font-family="Roboto" '
+    'text-anchor="start" '
+    'font-size="30">{stats_str_1}</text>'
+    '<text x="20" y="110" font-family="Roboto" '
+    'text-anchor="start" '
+    'font-size="30">{stats_str_2}</text>'
+    '<text x="20" y="170" font-family="Roboto" '
+    'text-anchor="start" '
+    'font-size="30">{stats_str_3}</text>'
     '<text x="20" y="230" font-family="Roboto" '
     'text-anchor="start" '
-    'font-size="24">{stats_str_5}</text>'
+    'font-size="30">{stats_str_4}</text>'
+
+    '<line x1="0" y1="250" x2="266" y2="250" stroke="black" stroke-width="1" fill="transparent"/>'
+
+    '<text x="20" y="300" font-family="Roboto" '
+    'text-anchor="start" '
+    'font-size="30">{stats_str_5}</text>'
     '</svg>'
 )
 
@@ -373,24 +381,23 @@ BOX_SCORE_COLUMN_HEADER = (
     '<text x="{text_x_pos}" y="60" font-family="Roboto" '
     'text-anchor="start" font-size="24">'
     'AB'
-    '&#160;R'
-    '&#160;H'
-    '&#160;RBI'
-    '&#160;BB'
-    '&#160;SO'
-    '&#160;LOB'
+    '&#160;&#160;R'
+    '&#160;&#160;&#160;&#160;H'
+    '&#160;&#160;&#160;RBI'
+    '&#160;&#160;BB'
+    '&#160;&#160;SO'
     '</text>'
+
     '<rect x="{x_pos}" y="2456" width="266" height="100" fill="white" '
     'stroke="black" stroke-width="1"/>'
     '<text x="{text_x_pos}" y="2516" font-family="Roboto" text-anchor="start" '
     'font-size="24">'
     'AB'
-    '&#160;R'
-    '&#160;H'
-    '&#160;RBI'
-    '&#160;BB'
-    '&#160;SO'
-    '&#160;LOB'
+    '&#160;&#160;R'
+    '&#160;&#160;&#160;&#160;H'
+    '&#160;&#160;&#160;RBI'
+    '&#160;&#160;BB'
+    '&#160;&#160;SO'
     '</text>'
 )
 
@@ -448,6 +455,13 @@ BOX_SCORE_LINE_TEMPLATE = (
     'font-size="{batter_font_size}" text-anchor="start">{box_score_line}</text>'
 )
 
+EMPTY_BOX = (
+    '<svg x="{x_pos}" y="{y_pos}" width="266" height="210" version="1.1" '
+    'xmlns="http://www.w3.org/2000/svg" '
+    'xmlns:xlink="http://www.w3.org/1999/xlink">'
+    '<rect x="0" y="0" width="266" height="210" stroke="black" fill="white" '
+    'stroke-width="1"/>'
+)
 
 SVG_HEADER = (
     '<svg x="{x_pos}" y="{y_pos}" width="266" height="200" version="1.1" '
@@ -866,7 +880,7 @@ def create_pitcher_stats_svg(chunk_tuple_list, chunk_size, box_score_dict):
     for location, pitcher_chunk in chunk_tuple_list:
         x_box, y_box = location
         pitcher_stats_svg += PITCHER_STATS_HEADER.format(x_box=x_box,
-                                                         y_box=y_box+(BOX_HEIGHT*(LEN_BATTING_LIST-9)))
+                                                         y_box=y_box+((BOX_HEIGHT*0.79) *(LEN_BATTING_LIST-9)))
 
         pitcher_stats_svg += '{}{}'.format(
             get_pitcher_box_score_lines(pitcher_chunk,
@@ -913,10 +927,10 @@ def add_all_pitcher_box_scores(game):
     tuple_list = [
         (game.home_team,
          game.home_pitcher_box_score_dict,
-         0),
+         -60),  # horrible hack
         (game.away_team,
          game.away_pitcher_box_score_dict,
-         HEIGHT // 2)
+         (HEIGHT // 2)-60)
     ]
 
     for this_tuple in tuple_list:
@@ -945,7 +959,7 @@ def get_team_stats_svg():
     ]
 
     for box_x, box_y in tuple_list:
-        team_stats_svg += get_team_stats_box(box_x, box_y)
+        team_stats_svg += get_team_stats_box(box_x, box_y - 100)
 
     return team_stats_svg
 
@@ -981,39 +995,21 @@ def assemble_stats_svg():
         box_x = n * BOX_WIDTH
 
         box_y = (HEIGHT // 2 +
-                 BOX_HEIGHT * LEN_BATTING_LIST +
+                 BOX_HEIGHT * (LEN_BATTING_LIST - 1) +
                  BOX_HEIGHT // 2)
 
         if n <= NUM_MINIMUM_INNINGS + 1:
             stats_svg += get_inning_stats_box(box_x, box_y)
         else:
-            stats_svg += (INNING_STATS_BOX.format(
-                box_x=box_x,
-                box_y=box_y,
-                stats_str_1='',
-                stats_str_2='',
-                stats_str_3='',
-                stats_str_4='',
-                stats_str_5='',
-                stats_str_6=''
-            ))
+            stats_svg += EMPTY_BOX.format(x_pos=box_x, y_pos=box_y) + SVG_FOOTER
 
-        box_y = (BOX_HEIGHT * LEN_BATTING_LIST +
+        box_y = (BOX_HEIGHT * (LEN_BATTING_LIST - 1) +
                  BOX_HEIGHT // 2)
 
         if n <= NUM_MINIMUM_INNINGS + 1:
             stats_svg += get_inning_stats_box(box_x, box_y)
         else:
-            stats_svg += (INNING_STATS_BOX.format(
-                box_x=box_x,
-                box_y=box_y,
-                stats_str_1='',
-                stats_str_2='',
-                stats_str_3='',
-                stats_str_4='',
-                stats_str_5='',
-                stats_str_6='')
-            )
+            stats_svg += EMPTY_BOX.format(x_pos=box_x, y_pos=box_y) + SVG_FOOTER
 
     return stats_svg
 
@@ -1186,8 +1182,8 @@ def get_game_svg_str(game):
     big_svg_text = '{}{}{}{}{}{}{}{}{}{}{}'.format(
         get_big_svg_header(),  # header of BATTER 1-10
         get_batter_list_and_stats(game),  # left batter list and right stats
-        assemble_stats_svg(),  # inning stats
         assemble_box_content_dict(),  # the boxes!!!!
+        assemble_stats_svg(),  # inning stats
         get_team_stats_svg(),  # bottom right box
         add_all_pitcher_box_scores(game),   # bottom pitcher box list
         assemble_game_title_svg(game),  # side team name / info
