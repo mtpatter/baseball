@@ -1,6 +1,10 @@
-## Template Scorecards
+# Template Scorecards
 
-To build a custom blank scorecard for printing, run e.g.:
+The `template_scorecard.py` script lets you build a game-specific,
+blank scorecard useful for printing and scoring MLB games by hand.
+If the starting lineup is available, the batter list and starting pitcher
+name will be pre-filled, along with game date and time, team names,
+logos, and location.
 
 ```python
 python template_scorecard.py 2016-11-02 CHC CLE
@@ -20,6 +24,10 @@ docker run -it --rm \
 This mounts a directory to write an .svg file locally for printing.
 
 To print the top and bottom of the innings with an optimal page break, select landscape, with custom 0.75" margins top and bottom, at 57% scale.
+
+
+
+# Baseball (Original Repo)
 
 **Table of Contents**
 
