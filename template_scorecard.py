@@ -416,11 +416,11 @@ BATTER_SVG_HEADER_SUMMARY = (
     '<rect x="0" y="0" width="532" height="200" stroke="black" fill="white" '
     'stroke-width="1"/>'
 
-    '<line x1="44" y1="0" x2="44" y2="266" stroke="black" fill="transparent"/>'
-    '<line x1="88" y1="0" x2="88" y2="266" stroke="black" fill="transparent"/>'
-    '<line x1="133" y1="0" x2="133" y2="266" stroke="black" fill="transparent"/>'
-    '<line x1="177" y1="0" x2="177" y2="266" stroke="black" fill="transparent"/>'
-    '<line x1="222" y1="0" x2="222" y2="266" stroke="black" fill="transparent"/>'
+    '<line x1="44" y1="0" x2="44" y2="266" stroke="darkgrey" fill="transparent"/>'
+    '<line x1="88" y1="0" x2="88" y2="266" stroke="darkgrey" fill="transparent"/>'
+    '<line x1="133" y1="0" x2="133" y2="266" stroke="darkgrey" fill="transparent"/>'
+    '<line x1="177" y1="0" x2="177" y2="266" stroke="darkgrey" fill="transparent"/>'
+    '<line x1="222" y1="0" x2="222" y2="266" stroke="darkgrey" fill="transparent"/>'
 
 
 )
