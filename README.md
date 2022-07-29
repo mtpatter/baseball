@@ -7,7 +7,7 @@ name will be pre-filled, along with game date and time, team names,
 logos, and location.
 
 ```python
-python template_scorecard.py 2016-11-02 CHC CLE
+python template_scorecard.py 2022-07-29 CHC SF
 ```
 
 Or in Docker:
@@ -18,12 +18,18 @@ docker build -t 'scorecard' .
 docker run -it --rm \
   -v $PWD:/app/baseball \
   scorecard \
-  python template_scorecard.py 2016-11-02 CHC CLE
+  python template_scorecard.py 2022-07-29 CHC SF
 ```
 
 This mounts a directory to write an .svg file locally for printing.
 
 To print the top and bottom of the innings with an optimal page break, select landscape, with custom 0.75" margins top and bottom, at 57% scale.
+
+Example below:
+
+[2022-07-29-CHC-SF-1.pdf](README_images/2022-07-29-CHC-SF-1.pdf)
+
+
 
 
 
