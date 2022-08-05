@@ -29,6 +29,8 @@ Example below:
 
 [2022-07-29-CHC-SF-1.pdf](README_images/2022-07-29-CHC-SF-1.pdf)
 
+Blank scorecard, for any game:
+[blank_scorecard.pdf](README_images/blank_scorecard.pdf)
 
 
 
