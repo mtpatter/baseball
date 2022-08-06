@@ -33,11 +33,6 @@ Blank scorecard, for any game:
 
 [blank_scorecard.pdf](README_images/blank_scorecard.pdf)
 
-[blank_scorecard.svg](README_images/blank_scorecard.svg)
-
-
-
-
 
 # Baseball (Original Repo)
 
