@@ -33,6 +33,10 @@ Blank scorecard, for any game:
 
 [blank_scorecard.pdf](README_images/blank_scorecard.pdf)
 
+A more minimalist version without count and fewer summary stats:
+
+[blank_scorecard_min.pdf](README_images/blank_scorecard_min.pdf)
+
 
 # Baseball (Original Repo)
 
